@@ -1,3 +1,5 @@
+//Code is mainly borrowed from ovals.sl from either the bump or height displacement
+//Changes are adding texturename and the last few line (marked)
 surface
 back (
         float Ka = 1;
@@ -14,7 +16,6 @@ back (
 	// be sure the normal points correctly (used for lighting):
 
 	varying vector Nf = faceforward( normalize( N ), I );
-	vector V = normalize( -I );
 
 	// determine how many squares over and up we are in right now:
 
@@ -58,11 +59,14 @@ back (
 	{
 		TheColor = color2;
 	}
-	// determine the lighted output color Ci:
+	// CHANGED CODE HERE
 
-       color c;
-      Ci =  TheColor;  
-		gather("illuminance", P, Nf,0,2, "surface:Ci", c) {
-			Ci = c-TheColor;
-		}   
+    color c = (0.,0.,0.);
+    Ci =  TheColor; 
+    float angle = 0.;
+    float samples = 1.; 
+    //Uses gather and traces a ray based upon the normal of the surface
+	gather("illuminance", P, Nf,angle,samples, "surface:Ci", c) {
+		Ci = c-TheColor;
+	}   
 }

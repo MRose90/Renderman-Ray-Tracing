@@ -1,0 +1,7682 @@
+##RenderMan RIB
+FrameBegin 1
+Format 1920 1080 -1
+Option "statistics" "endofframe" [1] "filename" ["stats.txt"] "xmlfilename" ["stats.xml"]
+Display "001.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 3 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 2
+Format 1920 1080 -1
+Display "002.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 6 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 3
+Format 1920 1080 -1
+Display "003.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 9 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 4
+Format 1920 1080 -1
+Display "004.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 12 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 5
+Format 1920 1080 -1
+Display "005.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 15 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 6
+Format 1920 1080 -1
+Display "006.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 18 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 7
+Format 1920 1080 -1
+Display "007.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 21 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 8
+Format 1920 1080 -1
+Display "008.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 24 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 9
+Format 1920 1080 -1
+Display "009.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 27 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 10
+Format 1920 1080 -1
+Display "010.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 30 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 11
+Format 1920 1080 -1
+Display "011.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 33 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 12
+Format 1920 1080 -1
+Display "012.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 36 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 13
+Format 1920 1080 -1
+Display "013.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 39 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 14
+Format 1920 1080 -1
+Display "014.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 42 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 15
+Format 1920 1080 -1
+Display "015.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 45 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 16
+Format 1920 1080 -1
+Display "016.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 48 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 17
+Format 1920 1080 -1
+Display "017.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 51 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 18
+Format 1920 1080 -1
+Display "018.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 54 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 19
+Format 1920 1080 -1
+Display "019.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 57 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 20
+Format 1920 1080 -1
+Display "020.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 60 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 21
+Format 1920 1080 -1
+Display "021.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 63 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 22
+Format 1920 1080 -1
+Display "022.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 66 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 23
+Format 1920 1080 -1
+Display "023.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 69 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 24
+Format 1920 1080 -1
+Display "024.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 72 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 25
+Format 1920 1080 -1
+Display "025.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 75 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 26
+Format 1920 1080 -1
+Display "026.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 78 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 27
+Format 1920 1080 -1
+Display "027.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 81 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 28
+Format 1920 1080 -1
+Display "028.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 84 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 29
+Format 1920 1080 -1
+Display "029.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 87 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 30
+Format 1920 1080 -1
+Display "030.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 90 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 31
+Format 1920 1080 -1
+Display "031.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 93 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 32
+Format 1920 1080 -1
+Display "032.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 96 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 33
+Format 1920 1080 -1
+Display "033.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 99 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 34
+Format 1920 1080 -1
+Display "034.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 102 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 35
+Format 1920 1080 -1
+Display "035.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 105 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 36
+Format 1920 1080 -1
+Display "036.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 108 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 37
+Format 1920 1080 -1
+Display "037.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 111 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 38
+Format 1920 1080 -1
+Display "038.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 114 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 39
+Format 1920 1080 -1
+Display "039.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 117 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 40
+Format 1920 1080 -1
+Display "040.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 120 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 41
+Format 1920 1080 -1
+Display "041.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 123 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 42
+Format 1920 1080 -1
+Display "042.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 126 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 43
+Format 1920 1080 -1
+Display "043.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 129 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 44
+Format 1920 1080 -1
+Display "044.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 132 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 45
+Format 1920 1080 -1
+Display "045.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 135 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 46
+Format 1920 1080 -1
+Display "046.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 138 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 47
+Format 1920 1080 -1
+Display "047.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 141 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 48
+Format 1920 1080 -1
+Display "048.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 144 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 49
+Format 1920 1080 -1
+Display "049.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 147 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 50
+Format 1920 1080 -1
+Display "050.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 150 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 51
+Format 1920 1080 -1
+Display "051.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 153 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 52
+Format 1920 1080 -1
+Display "052.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 156 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 53
+Format 1920 1080 -1
+Display "053.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 159 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 54
+Format 1920 1080 -1
+Display "054.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 162 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 55
+Format 1920 1080 -1
+Display "055.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 165 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 56
+Format 1920 1080 -1
+Display "056.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 168 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 57
+Format 1920 1080 -1
+Display "057.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 171 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 58
+Format 1920 1080 -1
+Display "058.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 174 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 59
+Format 1920 1080 -1
+Display "059.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 177 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 60
+Format 1920 1080 -1
+Display "060.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 180 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 61
+Format 1920 1080 -1
+Display "061.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 183 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 62
+Format 1920 1080 -1
+Display "062.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 186 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 63
+Format 1920 1080 -1
+Display "063.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 189 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 64
+Format 1920 1080 -1
+Display "064.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 192 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 65
+Format 1920 1080 -1
+Display "065.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 195 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 66
+Format 1920 1080 -1
+Display "066.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 198 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 67
+Format 1920 1080 -1
+Display "067.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 201 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 68
+Format 1920 1080 -1
+Display "068.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 204 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 69
+Format 1920 1080 -1
+Display "069.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 207 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 70
+Format 1920 1080 -1
+Display "070.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 210 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 71
+Format 1920 1080 -1
+Display "071.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 213 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 72
+Format 1920 1080 -1
+Display "072.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 216 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 73
+Format 1920 1080 -1
+Display "073.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 219 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 74
+Format 1920 1080 -1
+Display "074.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 222 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 75
+Format 1920 1080 -1
+Display "075.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 225 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 76
+Format 1920 1080 -1
+Display "076.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 228 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 77
+Format 1920 1080 -1
+Display "077.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 231 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 78
+Format 1920 1080 -1
+Display "078.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 234 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 79
+Format 1920 1080 -1
+Display "079.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 237 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 80
+Format 1920 1080 -1
+Display "080.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 240 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 81
+Format 1920 1080 -1
+Display "081.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 243 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 82
+Format 1920 1080 -1
+Display "082.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 246 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 83
+Format 1920 1080 -1
+Display "083.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 249 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 84
+Format 1920 1080 -1
+Display "084.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 252 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 85
+Format 1920 1080 -1
+Display "085.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 255 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 86
+Format 1920 1080 -1
+Display "086.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 258 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 87
+Format 1920 1080 -1
+Display "087.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 261 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 88
+Format 1920 1080 -1
+Display "088.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 264 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 89
+Format 1920 1080 -1
+Display "089.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 267 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 90
+Format 1920 1080 -1
+Display "090.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 270 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 91
+Format 1920 1080 -1
+Display "091.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 273 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 92
+Format 1920 1080 -1
+Display "092.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 276 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 93
+Format 1920 1080 -1
+Display "093.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 279 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 94
+Format 1920 1080 -1
+Display "094.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 282 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 95
+Format 1920 1080 -1
+Display "095.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 285 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 96
+Format 1920 1080 -1
+Display "096.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 288 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 97
+Format 1920 1080 -1
+Display "097.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 291 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 98
+Format 1920 1080 -1
+Display "098.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 294 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 99
+Format 1920 1080 -1
+Display "099.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 297 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 100
+Format 1920 1080 -1
+Display "100.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 300 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 101
+Format 1920 1080 -1
+Display "101.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 303 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 102
+Format 1920 1080 -1
+Display "102.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 306 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 103
+Format 1920 1080 -1
+Display "103.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 309 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 104
+Format 1920 1080 -1
+Display "104.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 312 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 105
+Format 1920 1080 -1
+Display "105.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 315 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 106
+Format 1920 1080 -1
+Display "106.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 318 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 107
+Format 1920 1080 -1
+Display "107.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 321 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 108
+Format 1920 1080 -1
+Display "108.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 324 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 109
+Format 1920 1080 -1
+Display "109.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 327 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 110
+Format 1920 1080 -1
+Display "110.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 330 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 111
+Format 1920 1080 -1
+Display "111.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 333 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 112
+Format 1920 1080 -1
+Display "112.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 336 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 113
+Format 1920 1080 -1
+Display "113.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 339 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 114
+Format 1920 1080 -1
+Display "114.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 342 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 115
+Format 1920 1080 -1
+Display "115.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 345 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 116
+Format 1920 1080 -1
+Display "116.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 348 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 117
+Format 1920 1080 -1
+Display "117.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 351 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 118
+Format 1920 1080 -1
+Display "118.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 354 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 119
+Format 1920 1080 -1
+Display "119.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 357 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+
+FrameBegin 120
+Format 1920 1080 -1
+Display "120.tiff" "tiff" "rgb"
+PixelSamples 3 3
+ShadingRate 1
+Declare "freq"  "uniform float"
+Declare "Ad"  "uniform float"
+Declare "Bd"  "uniform float"
+Declare "Amp"  "uniform float"
+Declare "scale" "uniform float"
+Projection "perspective" "fov" 25
+Translate 0 0 20
+Rotate -45 1 -1 0
+WorldBegin
+Attribute "bound" "displacement" [1.5]LightSource "ambientlight" 1 "intensity"[0.25]
+LightSource "shadowspot" 2 "from"[0 10 10] "intensity"[12] "string shadowname"["raytrace"]
+Attribute "visibility" "int diffuse"[1]
+Attribute "visibility" "int specular"[1]
+Attribute "visibility" "int transmission"[0]
+Attribute "trace" "int maxspeculardepth"[2]
+
+AttributeBegin
+Attribute "identifier" "name" ["bottom"]
+Rotate 110 1 0 0
+Translate 0 1 3
+Surface "back" "Ad" 0.05 "Bd" 0.05 "Amp" .75 "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["back"]
+Translate 1 1 3
+Rotate -30 1 -1 0
+Color [1 0 0]
+Surface "bottom" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+
+AttributeBegin
+Attribute "identifier" "name" ["front"]
+Rotate 80 .25 1 0
+Translate 1 0 -5
+Color [1 0 0]
+Surface "front" "texturename" ["raytrace"]
+Disk .2 5. 360.
+AttributeEnd
+
+AttributeBegin
+Attribute "identifier" "name"["deer"]
+Rotate 360 0 1 0
+Translate 0 0 0
+Color[1. 1. 1.]
+Surface "shinymetal" "texturename" ["raytrace"]
+Displacement "ripple" "freq" 20 "scale" 0.05
+ReadArchive "deer.rib"
+AttributeEnd
+
+WorldEnd
+FrameEnd
+
+
+

@@ -9,3 +9,5 @@ These disks also trace off eachother as can be seen close to where they touch.
 
 Animations: https://www.youtube.com/playlist?list=PLkmpfAgzaKtw-ozcIV-veR3ghuCgIgus-
 Render: http://imgur.com/kHyml5b
+
+This project works with RenderManProServer-20.6.
